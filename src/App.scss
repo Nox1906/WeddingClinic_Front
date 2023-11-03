@@ -1,0 +1,90 @@
+.app {
+  // background: url("./assets/E.jpg");
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: repeat;
+    background-color: var(--primary-color);
+    font-family: var(--font-base);
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.app__padding {
+  padding: 0 100px 50px ;
+}
+
+.app__container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+  }
+
+.app__wrapper {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 2em;
+  
+    @media screen and (max-width: 450px) {
+      padding: 4rem 1rem 2rem;
+    }
+  }
+
+.app__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__spacing {
+  margin-top: 25px;
+}
+
+.app__flex-col {
+  flex-direction: column;
+}
+
+.app__flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__Title{
+  color: var(--gray-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  
+  @media screen and (min-width: 2000px) {
+    font-size: 26px;
+}
+}
+
+
+.p-text {
+    font-size: 0.8rem;
+    text-align: left;
+    line-height: 1.5;
+    color: #6B7280;
+    font-size: 1rem;
+
+    @media screen and (min-width: 2000px) {
+        font-size: 1.2rem;
+    }
+}
+
+.p-text-bold {
+  font-weight: bold;
+}

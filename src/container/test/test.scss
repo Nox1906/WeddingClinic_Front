@@ -1,0 +1,22 @@
+
+
+.appointmentsmodal-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.appointmentsmodal-wrap .appointmentsmodal {
+    text-align: center;
+    padding: 50px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+// .display-none {
+//     display: none;
+// }

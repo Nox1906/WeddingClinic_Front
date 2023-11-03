@@ -1,0 +1,32 @@
+.svg-wrapper {
+    margin: 0 auto;
+    width: 320px;
+}
+
+.shape {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    fill: transparent;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.svg-wrapper:hover .shape {
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+
+.app__button-box {
+        
+    a {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        font-family: 'Fasthand', cursive;
+        font-size: 30px;
+        letter-spacing: .1cm;
+        font-weight: 1;
+        text-decoration: none;
+    }
+  }

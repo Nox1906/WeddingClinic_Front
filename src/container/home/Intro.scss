@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+.app__intro {
+    position: relative;
+    width: 100%;
+    max-height: 768px;
+    flex-direction: column;
+
+    video {
+        object-fit: cover;
+        width: 100%;
+        max-height: 768px;
+    }
+}

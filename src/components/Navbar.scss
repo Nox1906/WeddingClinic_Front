@@ -1,0 +1,236 @@
+.app__navbar {
+  width: 100%;
+  font-family: var(--font-base);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background: white;
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 2;
+  position: relative;
+
+
+  @media screen and (max-width: 1080px) {
+    flex-direction: row;
+    height: 100px;
+    padding-top: 0px;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  img {
+    height: 160px;
+
+    @media screen and (min-width: 2000px) {
+      height: 180px;
+    }
+
+    @media screen and (max-width: 1080px) {
+      height: 80px;
+    }
+  }
+}
+
+.app__navbar-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  list-style: none;
+
+  .dropdown {}
+
+  .dropdown-options {
+    display: none;
+    overflow: auto;
+    position: absolute;
+    background-color: rgb(255, 255, 255, .7);
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    transition: 3s linear;
+    z-index: 50S;
+  }
+
+  .dropdown:hover .dropdown-options {
+    display: block;
+    width: max-content;
+  }
+
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+    flex-direction: row;
+
+    a {
+      color: var(--black-color);
+      position: relative;
+      text-decoration: none;
+      flex-direction: column;
+      font-family: var(--font-base);
+      text-transform: uppercase;
+      font-weight: 500;
+
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+
+      &:hover:after {
+        transform: scaleX(0.65)
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #c00651;
+        transition: transform 0.25s ease-out
+      }
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+
+
+  svg {
+    width: 70%;
+    height: 70%;
+    color: var(--primary-color);
+  }
+
+  .nav-motiondiv {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 1rem;
+
+    width: 55%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    background-color: var(--primary-color);
+    background-size: cover;
+    background-repeat: repeat;
+
+    /* top box shadow */
+    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: var(--secondary-color);
+      margin: 0.5rem 1rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      .dropdown {
+        position: relative;
+
+      }
+
+      .dropdown-options {
+        display: none;
+        position: relative;
+        overflow: auto;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+        transition: 3s linear;
+      }
+
+      .dropdown:hover .dropdown-options {
+        display: block;
+        width: max-content;
+      }
+
+      li {
+        margin: 1rem;
+
+        a {
+          color: var(--black-color);
+          position: relative;
+          text-decoration: none;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: 500;
+
+          &:hover {
+            color: var(--secondary-color);
+          }
+
+          &:hover:after {
+            transform: scaleX(0.65)
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #c00651;
+            transition: transform 0.25s ease-out
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1080px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1080px) {
+    display: none;
+  }
+}
